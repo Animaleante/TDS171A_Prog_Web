@@ -18,7 +18,8 @@ public class Aula02
 
     public Aula02()
     {
-        Bicicleta bicicleta = new Bicicleta(40.0f, 3, 180);
+//        Bicicleta bicicleta = new Bicicleta();
+         Bicicleta bicicleta = new Bicicleta(40.0f, 3, 180);
         // bicicleta.setCadencia(4);
         System.out.println("Cadencia: " + bicicleta.getCadencia());
         System.out.println("Marcha: " + bicicleta.getMarcha());
