@@ -22,7 +22,8 @@ public class Veiculo
      */
     public Veiculo()
     {
-        // TODO Auto-generated constructor stub
+        ano = 0;
+        cor = "Indefinido";
     }
 
     /**

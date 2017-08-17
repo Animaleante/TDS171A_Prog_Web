@@ -17,7 +17,9 @@ public class Caminhao extends Automovel
      */
     public Caminhao()
     {
-        // TODO Auto-generated constructor stub
+        super();
+
+        tara = 0;
     }
 
     /**

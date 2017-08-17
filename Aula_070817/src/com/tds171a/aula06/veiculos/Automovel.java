@@ -22,7 +22,10 @@ public class Automovel extends Veiculo
      */
     public Automovel()
     {
-        // TODO Auto-generated constructor stub
+        super();
+
+        marca = "Indefinido";
+        fabricante = "Indefinido";
     }
 
     /**

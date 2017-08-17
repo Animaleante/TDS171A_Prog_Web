@@ -1,6 +1,8 @@
 package com.tds171a.aula06;
 
-import com.tds171a.aula05.veiculos.Carro;
+import com.tds171a.aula06.veiculos.Caminhao;
+import com.tds171a.aula06.veiculos.Carro;
+import com.tds171a.aula06.veiculos.Trem;
 
 /**
  *
@@ -23,6 +25,11 @@ public class Aula06
      */
     public Aula06()
     {
-        new Carro("vermelho", 1988, "Ka", "Ford");
+        Carro carro1 = new Carro();
+        Carro carro2 = new Carro(1988, "vermelho", "Ka", "Ford", 40);
+        Caminhao caminhao1 = new Caminhao();
+        Caminhao caminhao2 = new Caminhao(2000, "azul", "Noce", "Mercedes", 20);
+        Trem trem1 = new Trem();
+        Trem trem2 = new Trem(2010, "amarelo", null);
     }
 }

@@ -17,7 +17,9 @@ public class Carro extends Automovel
      */
     public Carro()
     {
-        // TODO Auto-generated constructor stub
+        super();
+
+        tamanhoPortaMalas = 0;
     }
 
     /**

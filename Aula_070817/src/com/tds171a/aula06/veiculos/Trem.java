@@ -16,12 +16,10 @@ public class Trem extends Veiculo
 
     /**
      * Construtor de Trem
-     * @param ano
-     * @param cor
      */
-    public Trem(int ano, String cor)
+    public Trem()
     {
-        super(cor, ano);
+        super();
     }
 
     /**
@@ -32,8 +30,7 @@ public class Trem extends Veiculo
      */
     public Trem(int ano, String cor, List<Vagao> listaVagoes)
     {
-        this(ano, cor);
-
+        super(cor, ano);
         this.listaVagoes = listaVagoes;
     }
 
