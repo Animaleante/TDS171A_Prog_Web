@@ -17,13 +17,13 @@ public class Aula05
 
     public Aula05()
     {
-        new Carro();
+        //new Carro();
         new Carro("azul", 2001, "Ka", "Ford");
 
         new Caminhao();
         new Caminhao("vermelho", 1980, "Qualquer", "bla", 500);
 
-        new Trem();
+        //new Trem();
         new Trem(new ArrayList<Vagao>(), "Tremzinho");
     }
 }
