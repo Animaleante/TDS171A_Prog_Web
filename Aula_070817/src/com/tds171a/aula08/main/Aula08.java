@@ -8,7 +8,6 @@ import com.tds171a.aula08.utilitario.Leitor;
 public class Aula08
 {
 
-    @SuppressWarnings("deprecation")
     public static void main(String[] args)
     {
         Pessoa pessoa = montarPessoa();
@@ -18,6 +17,7 @@ public class Aula08
         System.out.println("Data de Nascimento: " + pessoa.getDataNascimento());
     }
 
+    @SuppressWarnings("deprecation")
     public static Pessoa montarPessoa() {
         String nome = Leitor.readString("Entre com um nome...........................:");
         String sexo = Leitor.readString("Entre com seu sexo..........................:");
