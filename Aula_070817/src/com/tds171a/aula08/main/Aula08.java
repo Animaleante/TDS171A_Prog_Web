@@ -10,8 +10,13 @@ public class Aula08
 
     public static void main(String[] args)
     {
-        Pessoa pessoa = montarPessoa();
+        Pessoa[] listaPessoas = new Pessoa[3];
 
+        for(int i = 0; i < 3; i++) {
+            listaPessoas[i] = montarPessoa();
+        }
+
+        Pessoa pessoa = montarPessoa();
         System.out.println("Nome: " + pessoa.getNome());
         System.out.println("Sexo: " + pessoa.getSexo());
         System.out.println("Data de Nascimento: " + pessoa.getDataNascimento());
