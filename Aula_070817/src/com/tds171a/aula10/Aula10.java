@@ -1,7 +1,8 @@
 package com.tds171a.aula10;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import com.tds171a.aula08.pessoa.Pessoa;
@@ -80,15 +81,23 @@ public class Aula10
     /**
      * Método que cadastra uma nova pessoa
      */
-    @SuppressWarnings("deprecation")
     private void cadastro()
     {
         String nome = Leitor.readString("Informe o nome:");
         String sexo = Leitor.readString("Informe o sexo:");
         String dtNascimento = Leitor.readString("Informe a data de nascimento:");
 
-        listaPessoa.add(new Pessoa(nome, sexo, new Date(dtNascimento)));
-        System.out.println("--> Pessoa cadastrada");
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        try
+        {
+            listaPessoa.add(new Pessoa(nome, sexo, format.parse(dtNascimento)));
+            System.out.println("--> Pessoa cadastrada");
+        }
+        catch (ParseException Except)
+        {
+            System.out.println("--> Pessoa não cadastrada");
+            Except.printStackTrace();
+        }
     }
 
     /**
@@ -98,7 +107,9 @@ public class Aula10
     {
         for (Pessoa tPessoa : listaPessoa)
         {
-            System.out.println("Nome: " + tPessoa.getNome() + ", Sexo: " + tPessoa.getSexo() + ", Data de nascimento: " + tPessoa.getDataNascimento());
+            System.out.println("Nome: " + tPessoa.getNome() +
+                            ", Sexo: " + tPessoa.getSexo() +
+                            ", Data de nascimento: " + tPessoa.getDataNascimento());
         }
     }
 }
