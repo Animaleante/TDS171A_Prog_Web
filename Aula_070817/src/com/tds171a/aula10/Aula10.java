@@ -14,6 +14,10 @@ import com.tds171a.aula08.utilitario.Leitor;
  */
 public class Aula10
 {
+    private static final int MENU_CADASTRO = 1;
+    private static final int MENU_LISTAR = 2;
+    private static final int MENU_SAIR = 9;
+
     /**
      * Atributo que guarda a lista de pessoas
      */
@@ -38,7 +42,7 @@ public class Aula10
         int op = -1;
         do {
             op = menuPrincipal();
-        } while(op != 9);
+        } while(op != MENU_SAIR);
     }
 
     /**
@@ -57,13 +61,13 @@ public class Aula10
 
         switch (op)
         {
-            case 1:
+            case MENU_CADASTRO:
                 cadastro();
                 break;
-            case 2:
+            case MENU_LISTAR:
                 listar();
                 break;
-            case 9:
+            case MENU_SAIR:
                 break;
             default:
                 System.out.println("Opção inválida.");
