@@ -1,7 +1,8 @@
 package com.tds171a.aula08.main;
 
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 
 import com.tds171a.aula08.pessoa.Pessoa;
 import com.tds171a.aula08.utilitario.Leitor;
@@ -15,12 +16,14 @@ public class Aula08
 
     public static void main(String[] args)
     {
-        ArrayList<Pessoa> listaPessoas = new ArrayList<Pessoa>();
+//        List<Pessoa> listaPessoas = new ArrayList<Pessoa>();
+//        List<Pessoa> listaPessoas = new Vector<Pessoa>();
+        List<Pessoa> listaPessoas = new LinkedList<Pessoa>();
 
         long tStart = System.currentTimeMillis();
         for(int i = 0; i < NUM_PESSOAS; i++) {
             //listaPessoas.add(montarPessoa());
-            listaPessoas.add(new Pessoa("Bla", "M", new Date("01/01/1970")));
+            listaPessoas.add(new Pessoa("Bla", "M", new Date()));
         }
         long tEnd = System.currentTimeMillis();
 
