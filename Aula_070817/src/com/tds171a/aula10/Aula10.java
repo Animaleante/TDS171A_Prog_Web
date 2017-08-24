@@ -66,7 +66,7 @@ public class Aula10
             case 9:
                 break;
             default:
-                System.out.println("");
+                System.out.println("Opção inválida.");
                 break;
         }
 
@@ -76,6 +76,7 @@ public class Aula10
     /**
      * Método que cadastra uma nova pessoa
      */
+    @SuppressWarnings("deprecation")
     private void cadastro()
     {
         String nome = Leitor.readString("Informe o nome:");
