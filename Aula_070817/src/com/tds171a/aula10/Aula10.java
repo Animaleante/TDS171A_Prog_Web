@@ -7,15 +7,30 @@ import java.util.List;
 import com.tds171a.aula08.pessoa.Pessoa;
 import com.tds171a.aula08.utilitario.Leitor;
 
+/**
+ * Classe da Aula 10
+ * @author Lab. Desenvolvimento
+ *
+ */
 public class Aula10
 {
+    /**
+     * Atributo que guarda a lista de pessoas
+     */
     private List<Pessoa> listaPessoa;
 
+    /**
+     * Chamada main da aplicação
+     * @param args
+     */
     public static void main(String[] args)
     {
         new Aula10();
     }
 
+    /**
+     * Construtor da classe Aula10
+     */
     public Aula10()
     {
         listaPessoa = new ArrayList<Pessoa>();
@@ -26,6 +41,10 @@ public class Aula10
         } while(op != 9);
     }
 
+    /**
+     * Método que escreve o menu, recebe uma opção do usuário e atua em cima dessa escolha
+     * @return
+     */
     private int menuPrincipal()
     {
         System.out.println("Menu");
@@ -54,6 +73,9 @@ public class Aula10
         return op;
     }
 
+    /**
+     * Método que cadastra uma nova pessoa
+     */
     private void cadastro()
     {
         String nome = Leitor.readString("Informe o nome:");
@@ -64,6 +86,9 @@ public class Aula10
         System.out.println("--> Pessoa cadastrada");
     }
 
+    /**
+     * Método que lista as pessoas
+     */
     private void listar()
     {
         for (Pessoa tPessoa : listaPessoa)
