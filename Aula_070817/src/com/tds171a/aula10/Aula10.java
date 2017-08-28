@@ -1,12 +1,12 @@
 package com.tds171a.aula10;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.tds171a.aula08.pessoa.Pessoa;
 import com.tds171a.aula08.utilitario.Leitor;
+import com.tds171a.aula10.utilitario.Util;
 
 /**
  * Classe da Aula 10
@@ -87,10 +87,9 @@ public class Aula10
         String sexo = Leitor.readString("Informe o sexo:");
         String dtNascimento = Leitor.readString("Informe a data de nascimento:");
 
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         try
         {
-            listaPessoa.add(new Pessoa(nome, sexo, format.parse(dtNascimento)));
+            listaPessoa.add(new Pessoa(nome, sexo, Util.formataData(dtNascimento)));
             System.out.println("--> Pessoa cadastrada");
         }
         catch (ParseException Except)
@@ -109,7 +108,7 @@ public class Aula10
         {
             System.out.println("Nome: " + tPessoa.getNome() +
                             ", Sexo: " + tPessoa.getSexo() +
-                            ", Data de nascimento: " + tPessoa.getDataNascimento());
+                            ", Data de nascimento: " + Util.formataData(tPessoa.getDataNascimento()));
         }
     }
 }
