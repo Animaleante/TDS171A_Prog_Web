@@ -10,11 +10,12 @@ public class Util
 
     public static Date formataData(String dataFormatoString) throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat(PADRAO_DATA);
+        sdf.setLenient(false);
         return sdf.parse(dataFormatoString);
     }
 
     public static String formataData(Date dataFormatoDate) {
-        SimpleDateFormat sdf = new SimpleDateFormat(PADRAO_DATA);
-        return sdf.format(dataFormatoDate);
+//        return new SimpleDateFormat(PADRAO_DATA).format(dataFormatoDate);
+        return new SimpleDateFormat("dd/MM/yyyy EEE").format(dataFormatoDate);
     }
 }

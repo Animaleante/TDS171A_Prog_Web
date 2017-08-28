@@ -95,7 +95,7 @@ public class Aula10
         catch (ParseException Except)
         {
             System.out.println("--> Pessoa não cadastrada");
-            Except.printStackTrace();
+            //Except.printStackTrace();
         }
     }
 
