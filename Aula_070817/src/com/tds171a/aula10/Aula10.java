@@ -95,7 +95,6 @@ public class Aula10
         catch (ParseException Except)
         {
             System.out.println("--> Pessoa não cadastrada");
-            //Except.printStackTrace();
         }
     }
 
@@ -106,9 +105,10 @@ public class Aula10
     {
         for (Pessoa tPessoa : listaPessoa)
         {
-            System.out.println("Nome: " + tPessoa.getNome() +
-                            ", Sexo: " + tPessoa.getSexo() +
-                            ", Data de nascimento: " + Util.formataData(tPessoa.getDataNascimento()));
+            System.out.println(
+               "Nome: " + tPessoa.getNome() +
+               ", Sexo: " + tPessoa.getSexo() +
+               ", Data de nascimento: " + Util.formataData(tPessoa.getDataNascimento()));
         }
     }
 }
