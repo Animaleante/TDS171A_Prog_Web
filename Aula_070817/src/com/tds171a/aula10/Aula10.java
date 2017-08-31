@@ -27,16 +27,18 @@ public class Aula10
     /**
      * Chamada main da aplicação
      * @param args
+     * @throws ParseException
      */
-    public static void main(String[] args)
+    public static void main(String[] args) throws ParseException
     {
         new Aula10();
     }
 
     /**
      * Construtor da classe Aula10
+     * @throws ParseException
      */
-    public Aula10()
+    public Aula10() throws ParseException
     {
         listaPessoa = new ArrayList<Pessoa>();
 
@@ -49,8 +51,9 @@ public class Aula10
     /**
      * Método que escreve o menu, recebe uma opção do usuário e atua em cima dessa escolha
      * @return
+     * @throws ParseException
      */
-    private int menuPrincipal()
+    private int menuPrincipal() throws ParseException
     {
         System.out.println("Menu");
         System.out.println("--------------");
@@ -80,22 +83,23 @@ public class Aula10
 
     /**
      * Método que cadastra uma nova pessoa
+     * @throws ParseException
      */
-    private void cadastro()
+    private void cadastro() throws ParseException
     {
         String nome = Leitor.readString("Informe o nome:");
         String sexo = Leitor.readString("Informe o sexo:");
         String dtNascimento = Leitor.readString("Informe a data de nascimento:");
 
-        try
-        {
+//        try
+//        {
             listaPessoa.add(new Pessoa(nome, sexo, Util.formataData(dtNascimento)));
             System.out.println("--> Pessoa cadastrada");
-        }
-        catch (ParseException Except)
-        {
+//        }
+//        catch (ParseException Except)
+//        {
             System.out.println("--> Pessoa não cadastrada");
-        }
+//        }
     }
 
     /**
