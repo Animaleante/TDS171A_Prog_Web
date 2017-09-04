@@ -13,4 +13,10 @@ public class MainTeste
 
         System.out.println("fim");
     }
+
+    public static double divisao(int i, int j) {
+        double f = i / j;
+
+        return f;
+    }
 }
