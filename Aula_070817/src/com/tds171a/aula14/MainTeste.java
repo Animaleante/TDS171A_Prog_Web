@@ -6,17 +6,9 @@ public class MainTeste
     {
         System.out.println("inicio");
 
-        int a = 20;
-        int b = 0;
-
-        System.out.println(a/b);
+        ClasseA a = new ClasseA();
+        System.out.println("Divisão: " + a.divisao(20, 0));
 
         System.out.println("fim");
-    }
-
-    public static double divisao(int i, int j) {
-        double f = i / j;
-
-        return f;
     }
 }
