@@ -17,6 +17,10 @@ public class MainTeste
         {
             e.printStackTrace();
         }
+        finally
+        {
+            System.out.println("vou cair aqui sempre");
+        }
 
         System.out.println("fim");
     }
