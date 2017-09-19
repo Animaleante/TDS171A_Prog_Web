@@ -18,6 +18,16 @@ public class Main
         for (Funcionario func : listaFuncionarios)
         {
             System.out.println(func.getNome() + " - Bonus: " + func.pagarBonus());
+
+            if(func instanceof Diretor) {
+                System.out.println("Esse funcionario é um Diretor.");
+            } else if(func instanceof Secretario) {
+                System.out.println("Esse funcionario é um Secretario.");
+            } else if(func instanceof Professor) {
+                System.out.println("Esse funcionario é um Professor.");
+            } else {
+                System.out.println("Esse funcionario não é de nenhum dos tipos conhecidos.");
+            }
         }
     }
 
